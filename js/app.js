@@ -82,10 +82,11 @@ function setupMobileNav() {
 }
 
 function setupSmoothScrolling() {
-  const links = document.querySelectorAll('a[href^="#"]');
+  document.body.addEventListener("click", (e) => {
+    if (e.target.matches('a[href^="#"]')) {
+      const link = e.target.closest('a[href^="#"]');
+      if (!link) return;
 
-  links.forEach((link) => {
-    link.addEventListener("click", (e) => {
       const targetId = link.getAttribute("href");
       if (!targetId || targetId.length <= 1) return;
 
@@ -108,7 +109,7 @@ function setupSmoothScrolling() {
         icon.classList.remove("fa-times");
         icon.classList.add("fa-bars");
       }
-    });
+    }
   });
 }
 
@@ -123,7 +124,10 @@ function handleParallax() {
 
 function addTypingEffect() {
   const title = document.querySelector(".hero-title");
-  if (!title) return;
+  if (!title) {
+    console.error("Typing effect target '.hero-title' not found.");
+    return;
+  }
   const text = title.textContent;
   title.textContent = "";
   title.style.borderRight = "3px solid";
@@ -199,14 +203,12 @@ function addInteractiveEffects() {
 
 async function init() {
   await loadComponents();
-
   createParticles();
   setupMobileNav();
   setupSmoothScrolling();
   addTypingEffect();
   addMagneticButtons();
   addInteractiveEffects();
-
   handleScrollReveal();
   handleNavbarScroll();
 
