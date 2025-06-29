@@ -1,100 +1,323 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Muhammad Zakki Islami - Software Developer</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Muhammad Zakki Islami - Cinematic Portfolio</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/app.js"></script>
+  </head>
+  <body>
+    <!-- Animated Background -->
+    <div class="bg-animation"></div>
 
-    <nav class="navbar">
-        <div class="container">
-            <a href="#" class="logo">MZI</a>
-            <ul class="nav-links">
-                <li><a href="#about">About</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
+    <!-- Floating Particles -->
+    <div class="particles" id="particles"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+      <div class="nav-container">
+        <a href="#" class="logo">MZI</a>
+        <div class="nav-links">
+          <a href="#about">About</a>
+          <a href="#tech">Tech Stack</a>
+          <a href="#projects">Projects</a>
+          <a href="#contact">Contact</a>
         </div>
+        <button class="hamburger" id="hamburger">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
     </nav>
 
-    <header class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <h1>Muhammad Zakki Islami</h1>
-                <p class="subtitle">Software Developer</p>
-                <a href="#projects" class="btn">View My Work</a>
-            </div>
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="hero-content">
+        <h1 class="hero-title">Muhammad Zakki Islami</h1>
+        <p class="hero-subtitle">
+          Crafting extraordinary digital experiences through innovative backend
+          systems and elegant code architecture.
+        </p>
+        <div class="hero-cta">
+          <a href="#projects" class="btn btn-primary">
+            View My Work <i class="fas fa-arrow-right"></i>
+          </a>
+          <a href="#contact" class="btn btn-secondary">
+            Let's Connect <i class="fas fa-paper-plane"></i>
+          </a>
         </div>
-    </header>
-
-    <section id="about" class="about">
-        <div class="container">
-            <h2>About Me</h2>
-            <div class="about-content">
-                <div class="about-text">
-                    <p>Hello! I'm Zakki, a passionate software developer currently pursuing a degree in Informatics Engineering at the Faculty of Computer Science, Universitas Brawijaya. I have a strong foundation in software development principles and a keen interest in building elegant and efficient solutions to complex problems.</p>
-                    <p>I enjoy turning ideas into reality through code and am always eager to learn new technologies and improve my skills. My goal is to contribute to meaningful projects and collaborate with like-minded individuals.</p>
-                </div>
-                <div class="about-image">
-                    <img src="https://via.placeholder.com/300" alt="Muhammad Zakki Islami" id="profile-pic">
-                </div>
-            </div>
-        </div>
+      </div>
+      <div class="scroll-indicator">
+        <i class="fas fa-chevron-down"></i>
+      </div>
     </section>
 
-    <section id="projects" class="projects">
-        <div class="container">
-            <h2>My Projects</h2>
-            <div class="project-grid">
-                <div class="project-card">
-                    <img src="https://via.placeholder.com/400x300" alt="Project 1">
-                    <div class="project-info">
-                        <h3>Project Title 1</h3>
-                        <p>A brief and compelling description of your project. Mention the technologies used and the problem it solves.</p>
-                        <a href="#" class="btn-secondary">View Project</a>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <img src="https://via.placeholder.com/400x300" alt="Project 2">
-                    <div classs="project-info">
-                        <h3>Project Title 2</h3>
-                        <p>A brief and compelling description of your project. Mention the technologies used and the problem it solves.</p>
-                        <a href="#" class="btn-secondary">View Project</a>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <img src="https://via.placeholder.com/400x300" alt="Project 3">
-                    <div class="project-info">
-                        <h3>Project Title 3</h3>
-                        <p>A brief and compelling description of your project. Mention the technologies used and the problem it solves.</p>
-                        <a href="#" class="btn-secondary">View Project</a>
-                    </div>
-                </div>
-            </div>
+    <!-- About Section -->
+    <section class="section" id="about">
+      <div class="container">
+        <div class="section-header reveal">
+          <h2 class="section-title">About Me</h2>
+          <p class="section-subtitle">
+            Passionate about creating impactful digital solutions
+          </p>
         </div>
+        <div class="about-content">
+          <div class="about-text reveal">
+            <p>
+              I am a creative and driven software developer, currently pursuing
+              a degree in Informatics Engineering at Universitas Brawijaya. My
+              expertise lies in transforming complex problems into beautiful,
+              functional, and user-centric web applications.
+            </p>
+            <p>
+              With a passion for clean code and scalable architecture, I
+              specialize in backend development while maintaining a keen eye for
+              user experience. I thrive in environments that challenge me to
+              learn, grow, and push the boundaries of what's possible.
+            </p>
+            <p>Let's collaborate and build something extraordinary together.</p>
+          </div>
+          <div class="about-visual reveal">
+            <div class="about-visual-content">
+              <i
+                class="fas fa-code"
+                style="font-size: 4rem; margin-bottom: 1rem; opacity: 0.8"
+              ></i>
+              <h3>Code Craftsman</h3>
+              <p>Dedicated to excellence in every line</p>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <section id="contact" class="contact">
-        <div class="container">
-            <h2>Get In Touch</h2>
-            <p>I'm currently open to new opportunities and collaborations. Feel free to reach out!</p>
-            <a href="mailto:your.email@example.com" class="btn">Email Me</a>
+    <!-- Tech Stack Section -->
+    <section class="section" id="tech">
+      <div class="container">
+        <div class="section-header reveal">
+          <h2 class="section-title">Tech Stack</h2>
+          <p class="section-subtitle">
+            Technologies I use to bring ideas to life
+          </p>
+        </div>
+        <div class="tech-grid">
+          <div class="tech-card reveal">
+            <div class="tech-icon"><i class="fab fa-node-js"></i></div>
+            <h3 class="tech-name">Node.js</h3>
+            <p class="tech-description">Server-side JavaScript runtime</p>
+          </div>
+          <div class="tech-card reveal">
+            <div class="tech-icon"><i class="fas fa-server"></i></div>
+            <h3 class="tech-name">Express.js</h3>
+            <p class="tech-description">Fast web framework</p>
+          </div>
+          <div class="tech-card reveal">
+            <div class="tech-icon"><i class="fas fa-cube"></i></div>
+            <h3 class="tech-name">NestJS</h3>
+            <p class="tech-description">Progressive Node.js framework</p>
+          </div>
+          <div class="tech-card reveal">
+            <div class="tech-icon"><i class="fab fa-golang"></i></div>
+            <h3 class="tech-name">Go (Gin)</h3>
+            <p class="tech-description">High-performance web framework</p>
+          </div>
+          <div class="tech-card reveal">
+            <div class="tech-icon"><i class="fab fa-react"></i></div>
+            <h3 class="tech-name">React</h3>
+            <p class="tech-description">Modern UI library</p>
+          </div>
+          <div class="tech-card reveal">
+            <div class="tech-icon"><i class="fab fa-js"></i></div>
+            <h3 class="tech-name">TypeScript</h3>
+            <p class="tech-description">Type-safe JavaScript</p>
+          </div>
+          <div class="tech-card reveal">
+            <div class="tech-icon"><i class="fas fa-database"></i></div>
+            <h3 class="tech-name">PostgreSQL</h3>
+            <p class="tech-description">Advanced SQL database</p>
+          </div>
+          <div class="tech-card reveal">
+            <div class="tech-icon"><i class="fab fa-docker"></i></div>
+            <h3 class="tech-name">Docker</h3>
+            <p class="tech-description">Containerization platform</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="section" id="projects">
+      <div class="container">
+        <div class="section-header reveal">
+          <h2 class="section-title">Featured Projects</h2>
+          <p class="section-subtitle">
+            Showcasing my latest work and innovations
+          </p>
+        </div>
+        <div class="projects-grid">
+          <div class="project-card reveal">
+            <div class="project-image">
+              <img
+                src="https://images.unsplash.com/photo-1555099962-4199c345e546?w=600&h=400&fit=crop"
+                alt="Project 1"
+              />
+              <div class="project-overlay">
+                <i
+                  class="fas fa-external-link-alt"
+                  style="font-size: 2rem; color: white"
+                ></i>
+              </div>
+            </div>
+            <div class="project-content">
+              <h3 class="project-title">E-Commerce Platform</h3>
+              <p class="project-description">
+                A full-stack e-commerce solution built with modern technologies,
+                featuring real-time inventory management and secure payment
+                processing.
+              </p>
+              <div class="project-tags">
+                <span class="tag">React</span>
+                <span class="tag">Node.js</span>
+                <span class="tag">PostgreSQL</span>
+                <span class="tag">Docker</span>
+              </div>
+              <div class="project-links">
+                <a href="#" class="project-link">
+                  Live Demo <i class="fas fa-external-link-alt"></i>
+                </a>
+                <a href="#" class="project-link">
+                  GitHub <i class="fab fa-github"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-card reveal">
+            <div class="project-image">
+              <img
+                src="https://images.unsplash.com/photo-1550009158-94ae76552444?w=600&h=400&fit=crop"
+                alt="Project 2"
+              />
+              <div class="project-overlay">
+                <i
+                  class="fas fa-code"
+                  style="font-size: 2rem; color: white"
+                ></i>
+              </div>
+            </div>
+            <div class="project-content">
+              <h3 class="project-title">Task Management API</h3>
+              <p class="project-description">
+                A robust RESTful API built with NestJS and PostgreSQL, featuring
+                authentication, real-time notifications, and comprehensive task
+                tracking.
+              </p>
+              <div class="project-tags">
+                <span class="tag">NestJS</span>
+                <span class="tag">TypeScript</span>
+                <span class="tag">PostgreSQL</span>
+                <span class="tag">JWT</span>
+              </div>
+              <div class="project-links">
+                <a href="#" class="project-link">
+                  API Docs <i class="fas fa-book"></i>
+                </a>
+                <a href="#" class="project-link">
+                  GitHub <i class="fab fa-github"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-card reveal">
+            <div class="project-image">
+              <img
+                src="https://images.unsplash.com/photo-1542314831-068cd1dbb563?w=600&h=400&fit=crop"
+                alt="Project 3"
+              />
+              <div class="project-overlay">
+                <i
+                  class="fas fa-chart-line"
+                  style="font-size: 2rem; color: white"
+                ></i>
+              </div>
+            </div>
+            <div class="project-content">
+              <h3 class="project-title">Analytics Dashboard</h3>
+              <p class="project-description">
+                An intuitive analytics dashboard with real-time data
+                visualization, built using React and powered by a Go backend
+                with high-performance data processing.
+              </p>
+              <div class="project-tags">
+                <span class="tag">React</span>
+                <span class="tag">Go</span>
+                <span class="tag">Gin</span>
+                <span class="tag">Chart.js</span>
+              </div>
+              <div class="project-links">
+                <a href="#" class="project-link">
+                  Live Demo <i class="fas fa-external-link-alt"></i>
+                </a>
+                <a href="#" class="project-link">
+                  Case Study <i class="fas fa-file-alt"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section" id="contact">
+      <div class="container">
+        <div class="contact reveal">
+          <div class="contact-content">
+            <h2 class="contact-title">Let's Create Something Amazing</h2>
+            <p class="contact-text">
+              I'm always excited to discuss new projects, innovative ideas, or
+              opportunities to contribute to ambitious visions. Let's connect
+              and explore how we can work together.
+            </p>
+            <a href="mailto:your.email@example.com" class="contact-email">
+              your.email@example.com
+            </a>
             <div class="social-links">
-                <a href="#">LinkedIn</a>
-                <a href="#">GitHub</a>
-                <a href="#">Twitter</a>
+              <a href="#" class="social-link" target="_blank" title="LinkedIn">
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+              <a href="#" class="social-link" target="_blank" title="GitHub">
+                <i class="fab fa-github"></i>
+              </a>
+              <a href="#" class="social-link" target="_blank" title="Twitter">
+                <i class="fab fa-twitter"></i>
+              </a>
+              <a href="#" class="social-link" target="_blank" title="Instagram">
+                <i class="fab fa-instagram"></i>
+              </a>
             </div>
+          </div>
         </div>
+      </div>
     </section>
 
-    <footer>
-        <div class="container">
-            <p>&copy; 2025 Muhammad Zakki Islami. All Rights Reserved.</p>
-        </div>
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <p>
+          &copy; 2025 Muhammad Zakki Islami. Crafted with passion and
+          innovation.
+        </p>
+      </div>
     </footer>
-
-</body>
+  </body>
 </html>
